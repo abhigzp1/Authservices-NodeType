@@ -1,0 +1,35 @@
+auth-service/
+│
+├── src/
+│   ├── config/
+│   │   ├── env.ts                # Load env variables
+│   │   └── database.ts           # DB connection setup
+│   │
+│   ├── models/
+│   │   └── user.model.ts         # Mongoose user schema
+│   │
+│   ├── graphql/
+│   │   ├── schema.ts             # GraphQL typeDefs
+│   │   └── resolvers/
+│   │       └── user.resolver.ts  # Login, signup, profile queries/mutations
+│   │
+│   ├── controllers/
+│   │   └── auth.controller.ts    # Optional layer (REST endpoints if needed)
+│   │
+│   ├── middleware/
+│   │   └── auth.middleware.ts    # JWT verification
+│   │
+│   ├── services/
+│   │   └── auth.service.ts       # Business logic (login, signup, token)
+│   │
+│   ├── utils/
+│   │   ├── jwt.ts                # JWT helper functions
+│   │   └── hash.ts               # Password hashing helpers
+│   │
+│   ├── app.ts                    # Express + Apollo setup
+│   └── index.ts                  # Entry point
+│
+├── .env                          # Environment variables
+├── tsconfig.json                 # TypeScript config
+├── package.json
+└── README.md
