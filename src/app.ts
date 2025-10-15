@@ -28,7 +28,7 @@ export const startServer = async () => {
   app.use(
     "/graphql",
     expressMiddleware(server, {
-      context: async ({ req }) => {
+      context: async ({ req }: { req: express.Request }) => {
         const token = req.headers.authorization || "";
         try {
           const user = token ? verifyToken(token.replace("Bearer ", "")) : null;
